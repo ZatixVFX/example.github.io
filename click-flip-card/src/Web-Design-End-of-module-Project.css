@@ -1,0 +1,152 @@
+/* Form */
+.form {
+  width: 240px;
+  display: inline-block;
+  text-align: left;
+}
+
+/* Horziontal line design (Not using) */
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+/* Nav bar design */
+.navbar {
+  background-color: transparent;
+  transition: all 0.4s;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: #121212;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+  .navbar {
+    background: #121212;
+  }
+
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: white;
+  }
+}
+/* Address styling */
+div.address {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* html Background image */
+.bg-img {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+/* Background image styling */
+.card-img-top {
+  width: 100%;
+  height: 24vw;
+  object-fit: cover;
+}
+
+/* Take our card border */
+.card {
+  border: none;
+}
+
+/* Styling to Jeffery profile image */
+.jeffery-img {
+  object-fit: cover;
+  object-position: 100% 20%;
+  filter: blur(0.7px);
+  -webkit-filter: blur(0.7px);
+}
+/*
+.card {
+  background-color: black !important;
+}
+.card-title,
+.card-text {
+  color: #dee0df;
+}
+.profile-bg-color {
+  padding: 3px;
+  background-color: black;
+}
+*/
+
+/* Custom buttons */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.buttons {
+  margin: 10%;
+  text-align: center;
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+/* Button 1 */
+.btn-hover.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+/* Button 2 */
+.btn-hover.color-2 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+/* Button 8 */
+.btn-hover.color-8 {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+/* Button 9 */
+.btn-hover.color-9 {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}

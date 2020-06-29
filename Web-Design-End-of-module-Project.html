@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Design End-of-module Project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="Stylesheet" href="Web-Design-End-of-module-Project.css">
+    </head>
+<body class="bg-img">
+    <header class="p-4">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar nav-brand">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Web-Design-End-of-module-Project.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Newsfeed">News Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Users">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Admin">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#add-new-user">Add new user</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Add new user -->
+    <div class="modal" id="add-new-user">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="col-11 modal-title text-danger text-center">Register</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!--User Information-->
+                    <form method="POST">
+                    <div class="form-group row">
+                        <label for="Fullname" class="col-sm-4 col-form-label">Fullname:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Fullname" name="Fullname" placeholder="Enter your fullname" required>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Username" class="col-sm-4 col-form-label">Username:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter a username" required>
+                    </div>
+                    </div>
+                    <div class="form_group row">
+                        <label for="Password" class="col-sm-4 col-form-label">Password:</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="Password" name="Password" placeholder="Enter a password" required></br>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Home_Address" class="col-sm-4 col-form-label">Home Address:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Home_Address" name="Home_Address" placeholder="Enter your Home Address" required>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Kin_Name" class="col-sm-4 col-form-label">Kin Name:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Kin_Name" name="Kin_Name" placeholder="Enter kin name" required>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Kin_Relationship" class="col-sm-4 col-form-label">Kin relationship:</label>
+                    <div class="col-sm-8">
+                        <select class="custom-select mt-2" id="Kin_Relationship" name="Kin_Relationship" required></br>
+                            <option value="Married">Married</option>
+                            <option value="Single">Single</option>
+                            <option value="Rather_not_say">Rather not say</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Kin_Cellphone" class="col-sm-4 col-form-label">Kin Cell Number:</label>
+                    <div class="col-sm-8">
+                        <input type="tel" class="form-control" id="Kin_Cellphone" name="Kin_Cellphone" placeholder="Enter kin cellphone number" required>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Kin_Email" class="col-sm-4 col-form-label">Kin Email:</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" id="Kin_Email" name="Kin_Email" placeholder="Enter kin Email" required>
+                    </div>
+                    </div>
+                    <div class="text-right">
+                        <input type="submit" class="btn btn-dark" value="submit">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete user -->
+    <div class="modal" id="Delete-user">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="col-11 modal-title text-danger text-center">Delete user</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!--User Information-->
+                    <form method="POST">
+                    <div class="form-group">
+                        <label for="Username" class="col-sm-4 col-form-label">Username:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter a username" required>
+                    </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="Password" class="col-sm-4 col-form-label">Password:</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="Password" name="Password" placeholder="Enter a password" required></br>
+                    </div>
+                    </div>
+                    <div class="form-group text-right">
+                        <input type="submit" class="btn btn-dark" value="Delete">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="Users">
+    </br>
+    <!--Grid-->
+    <div class="container">
+        <!--Row-1-->
+        <div class="row">
+            <!--Jeffery Kelly profile card-->
+            <div class="col-xs-2 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="card card-border shadow mb-5 bg-white rounded">
+                    <img src="Images/Jeffery_Kelly/Jeffery_Kelly_Background.jpg" class="img-fluid card-img-top" alt="Image of solid light blue background"/>
+                    <br>
+                    <div class="card-img-overlay text-center p-5">
+                        <img  src="Images/Jeffery_Kelly/Jeffery_Kelly.jpg" class="rounded-circle profile p-1 mb-5 bg-white rounded jeffery-img" alt="Image of Jeffery Kelly" width="360px" height="360px"/>
+                    </div>
+                    <div class="col card-body text-center">
+                        <h3 class="card-title">Jeffery Kelly</h3>
+                        <p class="card-text">Email Address: jeffery.kelley@example.com</p>
+                        <p class="card-text">CellPhone Number: 0845300708</p>
+                        <p class="card-text">Landline Number: 0845300709</p>
+                        <!--Jeffery Kelly Kin (Modal)-->
+                        <button type="button" class="btn-hover color-1" data-toggle="modal" data-target="#Jeffery-Kelly">More Info</button>
+                        <button type="button" class="btn-hover color-9" data-toggle="modal" data-target="#Delete-user">Delete user</button>
+                        <div class="modal" id="Jeffery-Kelly">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="col-11 modal-title text-danger text-center">Jeffery Kelly</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--User Information-->
+                                        <div class="container col-xl-9 text-left">
+                                            <addres>
+                                                <h2 class="modal-h2">Home address: </h2><div class="col-xl-15 text-left address">4210  Leverton Cove Road<br>Agawam<br>Massachusetts<br>01001</div></address>
+                                            <h2 class="modal-h2">Kin name: </h2><p class="modal-p">James J Mitchell</p></br>
+                                            <h2 class="modal-h2">Kin relationship: </h2><p class="modal-p">Single</p><br>
+                                            <h2 class="modal-h2">Kin cell number: </h2><p class="modal-p">083 973 8706</p><br>
+                                            <h2 class="modal-h2">Kin email: </h2><p class="modal-p">James@example.com</p><br>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Marion Griffin profile card-->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="card card-border shadow mb-5 bg-white rounded">
+                    <img src="Images/Marion_Griffin/Marion_Griffin_background.jpg" class="img-fluid card-img-top" alt="Image of solid light blue background" style="opacity: 0.9;"/>
+                    <br>
+                    <div class="card-img-overlay text-center p-5">
+                        <img src="Images/Marion_Griffin/Marion_Griffin.jpg" class="rounded-circle profile p-1 mb-5 bg-white rounded" alt="Image of Marion Griffin" width="360px" height="360px" style="object-fit: cover; object-position: top;"/>
+                    </div>
+                    <div class="col card-body text-center">
+                        <h3 class="card-title">Marion Griffin</h3>
+                        <p class="card-text">Email Address: Marion.Griffin@example.com</p>
+                        <p class="card-text">CellPhone Number: 0645300798</p>
+                        <p class="card-text">Landline Number: 0828541772</p>
+                        <!--Marion Griffin Kin (Modal)-->
+                        <button type="button" class="btn-hover color-1" data-toggle="modal" data-target="#Marion-Griffin">More Info</button>
+                        <button type="button" class="btn-hover color-9" data-toggle="modal" data-target="#Delete-user">Delete user</button>
+                        <div class="modal" id="Marion-Griffin">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class=" col-11 modal-title text-danger text-center">Marion Griffin</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--User Information-->
+                                        <div class="container col-xl-9 text-left">
+                                            <addres>
+                                                <h2 class="modal-h2">Home address: </h2><div class="col-xl-15 text-left address">2378  Callison Lane<br>Wilmington<br>Delaware<br>19867</div></address><br>
+                                            <h2 class="modal-h2">Kin name: </h2><p class="modal-p">William C Tarbell</p></br>
+                                            <h2 class="modal-h2">Kin relationship: </h2><p class="modal-p">Married</p><br>
+                                            <h2 class="modal-h2">Kin cell number: </h2><p class="modal-p">084 241 8246</p><br>
+                                            <h2 class="modal-h2">Kin email: </h2><p class="modal-p">William@example.com</p><br>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Row_2-->
+        <div class="row">
+            <!--Edna Ruiz profile card-->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="card card-border shadow mb-5 bg-white rounded">
+                    <img src="Images/Edna_Ruiz/Camera.jpg" class="card-img-top" alt="Image of solid light blue background">
+                    <br>
+                    <div class="card-img-overlay text-center p-5">
+                        <img src="Images/Edna_Ruiz/Edna_Ruiz.jpg" class="rounded-circle profile p-1 mb-5 bg-white rounded" alt="Image of Edna Ruiz" width="360px" height="360px" style="object-fit: cover;"/>
+                    </div>
+                    <div class="col card-body text-center">
+                        <h3 class="card-title">Edna Ruiz</h3>
+                        <p class="card-text">Email Address: Edna.Ruiz@example.com</p>
+                        <p class="card-text">CellPhone Number: 0835499549</p>
+                        <p class="card-text">Landline Number: 0726141759</p>
+                        <!--Enda Ruiz Kin (Modal)-->
+                        <button type="button" class="btn-hover color-1" data-toggle="modal" data-target="#Edna-Ruiz">More Info</button>
+                        <button type="button" class="btn-hover color-9" data-toggle="modal" data-target="#Delete-user">Delete user</button>
+                        <div class="modal" id="Edna-Ruiz">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class=" col-11 modal-title text-danger text-center">Edna Ruiz</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--User Information-->
+                                        <div class="container col-xl-9 text-left">
+                                            <addres>
+                                                <h2 class="modal-h2">Home address: </h2><div class="col-xl-15 text-left address">3117  Burke Street<br>Norwood<br>Massachusetts<br>02062</div></address><br>
+                                            <h2 class="modal-h2">Kin name: </h2><p class="modal-p">Kristina A Speights</p></br>
+                                            <h2 class="modal-h2">Kin relationship: </h2><p class="modal-p">Single</p><br>
+                                            <h2 class="modal-h2">Kin cell number: </h2><p class="modal-p">084 940 5652</p><br>
+                                            <h2 class="modal-h2">Kin email: </h2><p class="modal-p">Kristina@example.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Rene Caldwell profile card-->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="card card-border shadow mb-5 bg-white rounded">
+                    <img src="Images/Rene_Caldwell/Rene_Caldwell_workspace.jpg" class="img-fluid card-img-top" alt="Image of solid light blue background"/>
+                    <br>
+                    <div class="card-img-overlay text-center p-5">
+                        <img src="Images/Rene_Caldwell/Rene_Caldwell.jpg" class="rounded-circle profile p-1 mb-5 bg-white rounded" alt="Image of Rene Caldwell" width="360px" height="360px" style="object-fit: cover;"/>
+                    </div>
+                    <div class="col card-body text-center">
+                        <h3 class="card-title">Rene Caldwell</h3>
+                        <p class="card-text">Email Address: Rene.Caldwell@example.com</p>
+                        <p class="card-text">CellPhone Number: 0648286658</p>
+                        <p class="card-text">Landline Number: 0744941519</p>
+                        <!--Rene Caldwell Kin (Modal)-->
+                        <button type="button" class="btn-hover color-1" data-toggle="modal" data-target="#Rene-Caldwell">More Info</button>
+                        <button type="button" class="btn-hover color-9" data-toggle="modal" data-target="#Delete-user">Delete user</button>
+                        <div class="modal" id="Rene-Caldwell">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class=" col-11 modal-title text-danger text-center">Rene Caldwell</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--User Information-->
+                                        <div class="container col-xl-9 text-left">
+                                            <addres>
+                                                <h2 class="modal-h2">Home address: </h2><div class="col-xl-15 text-left address">146  Cambridge Place<br>CALE<br>Arkansas<br>71828</div></address><br>
+                                            <h2 class="modal-h2">Kin name: </h2><p class="modal-p">Cassie R Hernandez</p></br>
+                                            <h2 class="modal-h2">Kin relationship: </h2><p class="modal-p">Married</p><br>
+                                            <h2 class="modal-h2">Kin cell number: </h2><p class="modal-p">084 969 3440</p><br>
+                                            <h2 class="modal-h2">Kin email: </h2><p class="modal-p">Cassie@example.com</p><br>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </a>
+    <a name="Admin">
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+        $(window).on('scroll', function () {
+            if ( $(window).scrollTop() > 10 ) {
+                $('.navbar').addClass('active');
+            } else {
+                $('.navbar').removeClass('active');
+            }
+        });
+    });
+    </script>
+</body>    
+</html>

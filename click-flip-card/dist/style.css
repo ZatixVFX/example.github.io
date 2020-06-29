@@ -1,0 +1,134 @@
+/* Scene Settings */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: Open Sans;
+    font-size: 20px;
+}
+
+label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -125%);
+    transform: translate(-50%, -125%);
+    cursor: pointer;
+}
+
+.border {
+  display: block;
+  margin-top: 4.7rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  opacity: 0%;
+}
+
+/* //////////////////////////////////////////////////////// */
+/* Card Settings */
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    text-align: center;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.card_content {
+  width: 300px;
+  height: 500px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  background: pink;
+  background-size: 300px 100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* //////////////////////////////////////////////////////// */
+/* Front Side Content */
+
+.front {
+  background: white;
+}
+
+.title {
+  padding-top: 1rem;
+}
+
+.info {
+  padding-bottom: 1rem;
+  color: grey;
+}
+ 
+/* //////////////////////////////////////////////////////// */
+/* Back Side Content */
+ .back {
+   background-image: linear-gradient(180deg, #db794f, #f1956e);
+   -webkit-transform: rotateY(180deg);
+   transform: rotateY(180deg);
+}
+
+.first_option, .second_option {
+  padding-top: 2rem;
+  color: white;
+}
+
+
+
+/* //////////////////////////////////////////////////////// */
+/* Rotates Card */
+:checked + .card {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+/* //////////////////////////////////////////////////////// */
+/* Button */
+
+.button__object {
+  padding-top: 4rem;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  transition: 0.3s;
+  display: inline-block;
+}
+.button:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+/* //////////////////////////////////////////////////////// */
+/* Hides Checkbox */
+input {
+    display: none;
+}
